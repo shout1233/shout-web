@@ -18,6 +18,7 @@ public class IndexController {
 			model.addAttribute("userName", sessionUser.getName());
 		} else {
 			System.out.println(">>>>>>>> 세션 없음");
+			System.out.println(">>>>>>>> Git Study : Hotfix 수정");
 		}
 		
 		return "index";
