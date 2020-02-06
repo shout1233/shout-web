@@ -59,7 +59,7 @@ public class PostApiController {
 			result.put(enumName, model);
 		}
 		
-		// 원격저장소에서 다시 소스 수정
+		// 로컬저장소에서 다시 소스 수정
 
 		return result;
 	}
