@@ -58,6 +58,8 @@ public class PostApiController {
 			List<EnumModel> model = Arrays.stream(commonEnum.getEnumConstants()).map(EnumGetter -> new EnumModel(EnumGetter)).collect(Collectors.toList());
 			result.put(enumName, model);
 		}
+		
+		// 로컬에서 수정
 
 		return result;
 	}
