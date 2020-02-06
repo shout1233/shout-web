@@ -2,7 +2,7 @@ package com.shout.edu.config.auth.dto;
 
 import java.io.Serializable;
 
-import com.shout.edu.domian.user.User;
+import com.shout.edu.domain.user.User;
 
 import lombok.Getter;
 

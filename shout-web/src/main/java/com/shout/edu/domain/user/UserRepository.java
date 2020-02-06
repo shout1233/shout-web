@@ -1,4 +1,4 @@
-package com.shout.edu.domian.user;
+package com.shout.edu.domain.user;
 
 import java.util.Optional;
 

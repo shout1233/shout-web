@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import com.shout.edu.domian.BaseTimeEntity;
+import com.shout.edu.domain.BaseTimeEntity;
 
 import lombok.Builder;
 import lombok.Getter;

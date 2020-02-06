@@ -18,8 +18,8 @@ import org.springframework.stereotype.Service;
 
 import com.shout.edu.config.auth.dto.OAuthAttributes;
 import com.shout.edu.config.auth.dto.SessionUser;
-import com.shout.edu.domian.user.User;
-import com.shout.edu.domian.user.UserRepository;
+import com.shout.edu.domain.user.User;
+import com.shout.edu.domain.user.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 

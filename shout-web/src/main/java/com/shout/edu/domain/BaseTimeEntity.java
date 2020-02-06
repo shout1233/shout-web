@@ -1,4 +1,4 @@
-package com.shout.edu.domian;
+package com.shout.edu.domain;
 
 import java.time.LocalDateTime;
 

@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.shout.edu.domian.user.Role;
+import com.shout.edu.domain.user.Role;
 
 @RunWith(SpringRunner.class)
 public class UserEnumTest {

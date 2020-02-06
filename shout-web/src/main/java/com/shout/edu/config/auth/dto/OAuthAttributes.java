@@ -2,8 +2,8 @@ package com.shout.edu.config.auth.dto;
 
 import java.util.Map;
 
-import com.shout.edu.domian.user.Role;
-import com.shout.edu.domian.user.User;
+import com.shout.edu.domain.user.Role;
+import com.shout.edu.domain.user.User;
 
 import lombok.Builder;
 import lombok.Getter;
