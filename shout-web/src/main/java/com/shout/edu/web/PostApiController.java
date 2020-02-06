@@ -59,7 +59,8 @@ public class PostApiController {
 			result.put(enumName, model);
 		}
 		
-		// 로컬에서 수정
+		// 로컬 데이터로 수정
+		// 원격저장소에서 소스 수정
 
 		return result;
 	}
