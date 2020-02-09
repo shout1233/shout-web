@@ -3,6 +3,7 @@ package com.shout.edu.web;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -52,8 +53,8 @@ public class PostApiControllerTest {
 		assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
 		assertThat(responseEntity.getBody()).isGreaterThan(0L);
 		
-		List<Post> postList = postRepo.findAll();
-		assertThat(postList.get(0).getTitle()).isEqualTo(title);
+		Optional<Post> savedPost = postRepo.findById(responseEntity.getBody());
+		assertThat(savedPost.get().getTitle()).isEqualTo(title);
 	}
 	
 	@Test
@@ -82,8 +83,8 @@ public class PostApiControllerTest {
 		assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
 		assertThat(responseEntity.getBody()).isGreaterThan(0L);
 		
-		List<Post> postList = postRepo.findAll();
-		assertThat(postList.get(0).getTitle()).isEqualTo(expectedTitle);
-		assertThat(postList.get(0).getContent()).isEqualTo(expectedContent);
+		Optional<Post> searchPost = postRepo.findById(responseEntity.getBody());
+		assertThat(searchPost.get().getTitle()).isEqualTo(expectedTitle);
+		assertThat(searchPost.get().getContent()).isEqualTo(expectedContent);
 	}
 }

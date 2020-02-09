@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,16 +24,14 @@ public class PostRepositoryTest {
 		String title = "테스트 게시글";
 		String content = "테스트 본문";
 
-		postRepo.save(Post.builder()
-				.title(title)
-				.content(content)
-				.build());
+		Post newPost =	postRepo.save(Post.builder()
+						.title(title)
+						.content(content)
+						.build());
 		
 		//when
-		List<Post> postList = postRepo.findAll();
-		
-		Post post = postList.get(0);
-		assertThat(post.getTitle()).isEqualTo(title);
+		Optional<Post> savedPost = postRepo.findById(newPost.getId());
+		assertThat(savedPost.get().getTitle()).isEqualTo(title);
 	}
 	
 	@Test
